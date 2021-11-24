@@ -11,3 +11,5 @@ https://lernantino.github.io/run-nuddy/
 
 ## Contribution
 Made with Lobe by Tsira Kvaratskhelia
+
+### ©️2019 Run Buddy, Inc 
