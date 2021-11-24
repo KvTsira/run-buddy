@@ -17,6 +17,14 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
 }
 
 header h1 {
@@ -83,6 +91,8 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
+  background-attachment: fixed;
+  background-position: 80%;
 }
 
 .hero-cta{
@@ -97,6 +107,7 @@ section {
   font-style: italic;
   font-size: 55px;
   color: #fce138;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .hero-form h3 {
   font-size: 24px;
@@ -104,11 +115,13 @@ section {
 }
 .hero-form{
   border: solid 3px #024e76;
-  background-color: #fce138;
+  /*background-color: #fce138;*/
+  background-color: rgba(252,225,56,0.8);
   padding: 20px;
   color: #024e76;
   width: 40%;
   margin: 3.5%;
+  border-radius: 15px;
 }
 .hero-form p {
   margin: 5px 0 15px 0;
@@ -122,6 +135,8 @@ section {
   color: #024e76;
   width: 100%;
   margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255, 0.75);
 }
 .hero-form label {
   margin: 0 5px;
@@ -132,6 +147,7 @@ section {
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 10px;
 }
 /* hero start end */
 
@@ -307,6 +323,7 @@ section {
   width: 100%;
   margin-bottom:  15PX;
   margin-top: 5px;
+  border-radius: 10px;
 }
 .contact-form button {
   width: 100%;
@@ -316,6 +333,7 @@ section {
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 .flex-row {
@@ -330,11 +348,13 @@ section {
   header {
     padding-bottom: 0;
     justify-content: center;
+    position: relative;
   }
 
   header h1 {
     width: 100%;
     text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
 
   header nav ul {
@@ -345,6 +365,7 @@ section {
 
   header nav ul li a {
     font-size: 20px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
 
   footer h2, footer div {
@@ -433,4 +454,49 @@ section {
   .contact-form {
     order: 3;
   }
+}
+
+/* default state */
+button{
+  background: white;
+}
+
+/* mouse is hovering over button */
+button:hover {
+  background: red;
+}
+
+/* button is in focus because it was the most recently clicked element on the page */
+button:focus {
+  background: green;
+}
+
+/* user is actively pressing the cursor down on the button */
+button:active {
+  background: blue;
+}
+
+header nav ul li a:hover {
+  background: #fce138;
+  color: #024e76;
+  border-radius: 15px;
+  text-shadow: none;
+}
+
+.hero-form button:hover {
+  background-color: #39a6b2;  
+}
+
+.contact-form button:hover {
+  color: #fce138;
+  background: #39a6b2;
+}
+
+.form-input:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
+}
+
+.step:last-child {
+  border-bottom: 1px solid #39a6b2;
 }
